@@ -4,8 +4,14 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    
+    for i in range( len(arr) ):
+        match = 0
+        for j in range( len(arr) ):
+            if arr[i] == arr[j] and i != j:
+                match = 1
+        if match == 0:
+            return arr[i]
 
 
 if __name__ == '__main__':
